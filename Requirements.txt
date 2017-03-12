@@ -1,8 +1,33 @@
-1. node v6.9.x or higher
-2. npm  v3.x.x or higher
+1. check if you have node v6.9.x or higher
+2. check if you have npm  v3.x.x or higher
 
-	- in command line run
+	- in command line run:
 		node -v
 		npm -v
 
-3. 
+3. install angular cli
+
+	- in the command line run:
+
+		npm i -g @angular/cli
+
+4. create your app
+
+	- in the command line run:
+
+		ng new name_of_app
+
+5. serve your app
+
+	// THE OPEN OPTION
+	// 	--open ( or just -o ) opens your browser for you @ http://localhost:4200/
+
+	// THE SERVE COMMAND 
+	// 	- launches the server, 
+	//	- watches your files, 
+	//	- and rebuilds the app as you make changes to your files
+
+	- in the command line run:
+
+		cd my-app
+		ng serve --open
