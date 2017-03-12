@@ -1,0 +1,65 @@
+﻿<res-page [heroTitle]="'Search'" [heroTagline]="'Select a Residence Hall to Begin'" [pageId]="'home.component'">
+            
+    <!-- DOOR SEARCH FORM -->
+    <res-card [title]="'door search criteria'" [dependencyStatus]="doorSearchDependencyStatus">
+        <section class="full-width res-tab-content">
+            <section class="form-section">
+                <br />
+                <res-select [title]="'Hall Name'"
+                            [options]="buildingNames"
+                            [selectedIndex]="hallNameIndex"
+                            (change)="onHallChanged($event)" 
+                            class="half-width"></res-select>
+                <res-select [title]="'Floor Number'"
+                            [options]="floorNumbers"
+                            [selectedIndex]="floorNumberIndex"
+                            (change)="onFloorChanged($event)"
+                            class="half-width"
+                            style="float: right;"
+                            [disabled]="floorNumbers.length === 0"></res-select>
+                        
+                <label class="form-label">Search</label>
+                <input type="text" 
+                        [(ngModel)]="searchText" 
+                        (keyup)="onSearchTextChanged($event)"
+                        [disabled]="selectedHallName === '' || selectedHallName === notSelectedOption" />
+            </section>                   
+        </section>
+    </res-card>
+            
+    <!-- DOOR LIST -->
+    <res-card [title]="'search results'" [dependencyStatus]="doorListDependencyStatus">
+
+        <section class="table-wrapper sub-section" *ngIf="doors.length > 0">
+            <br />
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>HallName</th>
+                        <th>Door</th>
+                        <th>Location</th>
+                        <th>IsAda</th>
+                        <th>Barcode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let door of doors" class="selectable-row" (click)="navigateToDoor(door)">
+                        <td>{{door.HallName}}</td>
+                        <td>{{door.DoorNumber + " " + door.Suffix}}</td>
+                        <td>{{door.Location | slice:0:24}}</td>
+                        <td>{{door.IsAda ? "yes" : "no"}}</td>
+                        <td>{{door.Barcode}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="sub-section full-width" *ngIf="doors.length === 0">
+            <div class="centered">
+                <p class="res-info">No Doors Match the Supplied Criteria</p>
+            </div>
+        </section>
+
+    </res-card> 
+
+</res-page>
