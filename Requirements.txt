@@ -11,13 +11,19 @@
 
 		npm i -g @angular/cli
 
-4. create your app
+4. create your app (Optionally)
 
 	- in the command line run:
 
 		ng new name_of_app
 
-5. serve your app
+5. install node_modules
+
+	- in the command line run:
+
+		npm i
+
+6. serve your app
 
 	// THE OPEN OPTION
 	// 	--open ( or just -o ) opens your browser for you @ http://localhost:4200/
@@ -30,4 +36,9 @@
 	- in the command line run:
 
 		cd my-app
-		ng serve --open
+		ng serve --open  	// OR //  npm start  // same thing
+
+
+NOTE:
+  // here's where you can find all of the AST compiler options
+  "./node_modules/@angular/cli/lib/config/schema.json"
