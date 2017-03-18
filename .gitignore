@@ -4,8 +4,8 @@
 /dist
 /tmp
 
-# dependencies
-/node_modules
+# keeping lib
+#/node_modules
 
 # IDEs and editors
 /.idea
