@@ -1,40 +1,40 @@
-﻿<header class="res-banner"
-        [ngClass]="{ 'res-is-sticky' : navIsSticky, 'res-is-open' : menuIsOpen }"
+﻿<header class="zalgo-banner"
+        [ngClass]="{ 'zalgo-is-sticky' : navIsSticky, 'zalgo-is-open' : menuIsOpen }"
         role="banner"
         #resHeader>
     
-    <div class="res-grid">
+    <div class="zalgo-grid">
         
         <a href="" 
            (click)="scrollToTopOfPage($event)"
-           class="res-logo res-scrollto"
+           class="zalgo-logo zalgo-scrollto"
            rel="bookmark">{{appName}}</a>
 
         <button type="button"
                 role="button"
                 aria-label="Toggle Navigation"
-                data-res-navicon="button"
-                [ngClass]="{ 'res-is--closed' : menuIsOpen }"
+                data-zalgo-navicon="button"
+                [ngClass]="{ 'zalgo-is--closed' : menuIsOpen }"
                 (click)="toggleMenu()"
-                class="res-icon-menu res-navicon res-navicon-x">
+                class="zalgo-icon-menu zalgo-navicon zalgo-navicon-x">
             
-            <span class="res-navicon__lines"></span>
+            <span class="zalgo-navicon__lines"></span>
 
         </button>
 
         <div role="navigation"
-             class="res-nav">
+             class="zalgo-nav">
             
-            <ul class="res-nav__list">
+            <ul class="zalgo-nav__list">
                 
-                <li class="res-nav__list-item"
+                <li class="zalgo-nav__list-item"
                     *ngFor="let link of links; let i = index;">
 
                     <a routerLink="{{link.url}}"
-                       routerLinkActive="res-nav-active"
+                       routerLinkActive="zalgo-nav-active"
                        (click)="setCurrentRoute(i)"
                        [routerLinkActiveOptions]="{ exact: true }"
-                       class="res-scrollto">{{link.name}}</a>
+                       class="zalgo-scrollto">{{link.name}}</a>
                 </li>
             </ul>
         </div>
@@ -42,13 +42,13 @@
     </div>
 </header>
 
-<div class="res-hero"
+<div class="zalgo-hero"
      #resHero>
     
-    <res-fader [isVisible]="visible">
-        <h1 class="res-hero__title">{{heroTitle}}</h1>
+    <zalgo-fader [isVisible]="visible">
+        <h1 class="zalgo-hero__title">{{heroTitle}}</h1>
 
-        <p class="res-hero__tagline">{{heroTagline}}</p>
-    </res-fader>
+        <p class="zalgo-hero__tagline">{{heroTagline}}</p>
+    </zalgo-fader>
 
 </div>

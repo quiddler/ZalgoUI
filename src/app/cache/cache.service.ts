@@ -9,7 +9,7 @@ import { Singleton, ISingleton } from "../decorators/singleton";
 
 @Injectable()
 @Singleton()
-export class ResCache implements ISingleton {
+export class ZalgoCache implements ISingleton {
 
     private static cache: Object = {};
 
@@ -21,8 +21,8 @@ export class ResCache implements ISingleton {
     }
 
     getCached(key: string): any {
-        if (ResCache.cache.hasOwnProperty(key)) {
-            return ResCache.cache[key];
+        if (ZalgoCache.cache.hasOwnProperty(key)) {
+            return ZalgoCache.cache[key];
         } else if (localStorage.getItem(key) && localStorage.getItem(key).length > 0) {
             return JSON.parse(localStorage.getItem(key))
         }
@@ -30,19 +30,19 @@ export class ResCache implements ISingleton {
     }
 
     setCached(key: string, value: any): void {
-        ResCache.cache[key] = value;
+        ZalgoCache.cache[key] = value;
         localStorage.setItem(key, JSON.stringify(value));
     }
 
     delCached(key: string): void {
-        if (ResCache.cache.hasOwnProperty(key)) {
-            delete ResCache.cache[key];
+        if (ZalgoCache.cache.hasOwnProperty(key)) {
+            delete ZalgoCache.cache[key];
         }
         localStorage.removeItem(key);
     }
 
     cleanse(): void {
-        ResCache.cache = {};
+        ZalgoCache.cache = {};
         localStorage.clear();
     }
 }

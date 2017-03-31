@@ -1,8 +1,8 @@
 ﻿import { Component, Input } from "@angular/core";
 
 @Component({
-    selector: "res-card",
-    //styleUrls: ['Content/angular/ui_components/res-card.component.css'],
+    selector: "zalgo-card",
+    //styleUrls: ['./card.scss'],
     template: `
         <section class="main-section">
             <h2 class="main-section-header">{{title}}</h2>
@@ -32,7 +32,7 @@
     `
 })
 
-export class ResCardComponent {
+export class ZalgoCardComponent {
     @Input() title: string;
     @Input() dependencyStatus: string;
 }

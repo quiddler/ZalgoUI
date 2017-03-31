@@ -1,12 +1,12 @@
 ﻿import { Component, AfterViewInit, OnDestroy, Input, ViewChild, HostListener } from "@angular/core";
-import { ResBus } from "../bus/bus.service";
-import { ResAnimator } from "../animations/res-animator";
+import { ZalgoBus } from "../../bus/bus.service";
+import { ZalgoAnimator } from "../../animations/zalgo-animator";
 
 @Component({
     moduleId:     module.id,
-    selector:    'res-header',
-    templateUrl: 'res-header.component.html',
-    styleUrls:  ['res-header.component.css']
+    selector:    'zalgo-header',
+    templateUrl: 'zalgo-header.component.html',
+    styleUrls:  ['zalgo-header.component.css']
 })
 
 export class ResHeaderComponent implements AfterViewInit, OnDestroy {
@@ -23,10 +23,10 @@ export class ResHeaderComponent implements AfterViewInit, OnDestroy {
     @Input() links;
     @Input() appName;
 
-    @ViewChild("resHeader") header;
-    @ViewChild("resHero") hero;
+    @ViewChild("zalgoHeader") header;
+    @ViewChild("zalgoHero") hero;
 
-    constructor(private bus: ResBus) {
+    constructor(private bus: ZalgoBus) {
         this.registerPageLoad();
     }
 
@@ -73,7 +73,7 @@ export class ResHeaderComponent implements AfterViewInit, OnDestroy {
     }
 
     scrollToTopOfPage(event) {
-        let animator = new ResAnimator();
+        let animator = new ZalgoAnimator();
         animator.scrollToTop(() => console.log("scroll to top animation complete... something, something... complete..."));
         if(event) event.preventDefault();
     }

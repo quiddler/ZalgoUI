@@ -5,7 +5,7 @@ import { Injectable }            from "@angular/core";
 @Injectable()
 @Mediator()
 @Singleton()
-export class ResBus implements IMediator, ISingleton {
+export class ZalgoBus implements IMediator, ISingleton {
 
     constructor() {
         return this.getInstance();

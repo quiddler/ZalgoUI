@@ -1,5 +1,5 @@
 ﻿import { Injectable }  from "@angular/core";
-import { UniqueSet }   from "../containers/unique-set";
+import { UniqueSet }   from "../../containers/unique-set";
 import { SearchModel } from "./search-model";
 
 @Injectable()

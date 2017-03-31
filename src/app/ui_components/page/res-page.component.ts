@@ -1,10 +1,10 @@
 ﻿import { Component, OnInit, AfterViewInit, OnDestroy, Input } from "@angular/core";
-import { ResBus } from "../bus/bus.service";
-import { ResCache } from "../cache/cache.service";
-import { ResAnimator } from "../animations/res-animator";
+import { ZalgoBus } from "../../bus/bus.service";
+import { ZalgoCache } from "../../cache/cache.service";
+import { ZalgoAnimator } from "../../animations/zalgo-animator";
 
 @Component({
-    selector: "res-page",
+    selector: "zalgo-page",
     template: `
         <div class="container less-bottommy">
             <main id="content" class="contain">
@@ -13,11 +13,11 @@ import { ResAnimator } from "../animations/res-animator";
                 </div>
             </main>
         </div>
-        <res-footer></res-footer>
+        <zalgo-footer></zalgo-footer>
     `,
 })
 
-export class ResPageComponent implements OnInit, AfterViewInit, OnDestroy {
+export class ZalgoPageComponent implements OnInit, AfterViewInit, OnDestroy {
     
     @Input() heroTitle: string = "";
     @Input() heroTagline: string = "";
@@ -28,7 +28,7 @@ export class ResPageComponent implements OnInit, AfterViewInit, OnDestroy {
     private scrollToken: number;
     private scrollPosition: any = null;
 
-    constructor(private bus: ResBus, private cache: ResCache) {}
+    constructor(private bus: ZalgoBus, private cache: ZalgoCache) {}
 
     ngOnInit() {
         window.scrollTo(0, 0);
@@ -44,7 +44,7 @@ export class ResPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
             if (this.scrollPosition !== null) {
                 setTimeout(() => {
-                    let animator = new ResAnimator();
+                    let animator = new ZalgoAnimator();
                     animator.scrollToPosition(this.scrollPosition.y, () => {
                         this.bus.emit("scroll-finished", window.scrollY);
                     });

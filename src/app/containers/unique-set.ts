@@ -62,11 +62,13 @@ export class UniqueSet<T> implements Set<T>, IterableIterator<T> {
 
     // -------------------------------------------------------------------------
     //                                            Set (Interface Implementation)
+    get [Symbol.toStringTag] (): "Set" { return "Set"; } 
+
     get size(): number { return this._set.size; }
 
     public add(value: T): any { return this._set.add(value); }
 
-    public toJSON(): string { return this._set.toJSON(); }
+    public toJSON(): string { return JSON.stringify(this._set); }
 
     public values(): IterableIterator<T> { return this._set.values(); }
 

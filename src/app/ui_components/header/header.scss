@@ -18,7 +18,7 @@ $navicon-radius: $navicon-size/14 !default;
     transition: $navicon-transition;
 }
 
-[data-res-navicon="button"] {
+[data-zalgo-navicon="button"] {
     display:inline-block;
     margin: 0;
     border:none;
@@ -29,7 +29,7 @@ $navicon-radius: $navicon-size/14 !default;
     &:focus { outline: none; }
 }
 
-.res-navicon__lines {
+.zalgo-navicon__lines {
     @include navicon_lines;
     position: relative;
     &:before,
@@ -42,17 +42,17 @@ $navicon-radius: $navicon-size/14 !default;
     }
     &:before { top: $navicon-size/4; }
     &:after { top: -$navicon-size/4; }
-    .res-is--closed & { transform: scale3d(.8,.8,.8); }
+    .zalgo-is--closed & { transform: scale3d(.8,.8,.8); }
 }
 
-.res-navicon {
+.zalgo-navicon {
   padding: $navicon-size/2.25 $navicon-size/4;
   transition: $navicon-transition;
 }
 
-.res-navicon-x {
-    &.res-is--closed {
-        .res-navicon__lines {
+.zalgo-navicon-x {
+    &.zalgo-is--closed {
+        .zalgo-navicon__lines {
             background: transparent;
             &:before,
             &:after {
@@ -66,12 +66,12 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-grid {
+.zalgo-grid {
     max-width: 1040px;
     margin: 0 auto;
     padding: 0 5%;
 
-    .res-banner & {
+    .zalgo-banner & {
         padding: 0;
         max-width: 1040px;
         margin: 0 auto;
@@ -84,7 +84,7 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-banner {
+.zalgo-banner {
     height: 100%;
     position: absolute;
     top: 0;
@@ -101,7 +101,7 @@ $navicon-radius: $navicon-size/14 !default;
         height: auto;
     }
 
-    &.res-is-open {
+    &.zalgo-is-open {
         max-height: 100%;
         position: fixed;
         top: 0;
@@ -111,7 +111,7 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-hero {
+.zalgo-hero {
     display: table;
     width: 100%;
     height: 40%;
@@ -129,7 +129,7 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-hero__title {
+.zalgo-hero__title {
     display: table-cell;
     height: 50%;
     margin: 0;
@@ -147,7 +147,7 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-hero__tagline {
+.zalgo-hero__tagline {
     display: table-row;
     color: #5C81A7;
     padding-bottom: 1%;
@@ -157,7 +157,7 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-logo {
+.zalgo-logo {
     display: block;
     flex: 1;
     margin-top: 0;
@@ -172,7 +172,7 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-nav {
+.zalgo-nav {
     @media only screen and (max-width: 766px) {
         width: 100%;
     }
@@ -195,16 +195,16 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-nav-active {
+.zalgo-nav-active {
     border-bottom: 10px solid $navicon-link-active-color;
 }
 
-.res-nav__list {
+.zalgo-nav__list {
     list-style: none;
     padding-left: 0;
 }
 
-.res-nav__list-item {
+.zalgo-nav__list-item {
     line-height: 1.5;
     height: 100%;
     padding-top: 2%;
@@ -220,7 +220,7 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-icon-menu {
+.zalgo-icon-menu {
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -231,12 +231,12 @@ $navicon-radius: $navicon-size/14 !default;
     }
 }
 
-.res-section {
+.zalgo-section {
     background: #333;
     color: #CCC;
 }
 
-.res-is-sticky {
+.zalgo-is-sticky {
     position: fixed;
     top: 0;
     background: rgba(16, 35, 48, 0.93);

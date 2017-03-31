@@ -2,9 +2,9 @@
 import { fader } from "../animations/fade-in-out.animation";
 
 @Component({
-    selector: "res-tab",
+    selector: "zalgo-tab",
     animations: [fader()],
-    //styleUrls: ['Content/angular/ui_components/res-tab.component.css'],
+    //styleUrls: ['./zalgo-tab.component.scss'],
     template: `
         <div class="full-width" [@visibilityChanged]="!disabled" >
             <ng-content class="full-width" *ngIf="!disabled"></ng-content>
@@ -12,7 +12,7 @@ import { fader } from "../animations/fade-in-out.animation";
     `
 })
 
-export class ResTab {
+export class ZalgoTab {
 
     @Input() title: string = "Not Set";
 

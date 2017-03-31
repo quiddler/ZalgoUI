@@ -1,7 +1,7 @@
 ﻿import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 
-var url = window["doorWorx"].LoginUrl;
+var url = window["zalgo"].LoginUrl;
 
 @Injectable()
 export class ErrorHandler {

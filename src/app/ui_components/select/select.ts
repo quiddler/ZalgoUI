@@ -2,7 +2,7 @@
 
 @Component({
     moduleId: module.id,
-    selector: "res-select",
+    selector: "zalgo-select",
     template: `
         <label class="form-label">{{title}}</label>
         <div class="custom_dropdown full-width">
@@ -17,7 +17,7 @@
     `
 })
 
-export class ResSelect {
+export class ZalgoSelect {
 
     @Input() title: string;
     @Input() disabled: boolean = false;

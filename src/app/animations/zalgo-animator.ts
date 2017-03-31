@@ -2,7 +2,7 @@
 import { Delta } from "./delta";
 import { Step } from "./step";
 
-export class ResAnimator {
+export class ZalgoAnimator {
 
     private deltaFuncion: Function = DeltaMutator.makeEaseInOut(Delta.quadratic);
     private duration: number = 1000;

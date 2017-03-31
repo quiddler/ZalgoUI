@@ -1,9 +1,9 @@
 ﻿import { Component, Input, ContentChildren, QueryList, AfterViewInit } from "@angular/core";
-import { ResTab } from "./res-tab.component";
+import { ZalgoTab } from "../tab/tab";
 
 @Component({
-    selector: "res-tab-group",
-    //styleUrls: ['Content/angular/ui_components/res-tab-group.component.css'],
+    selector: "zalgo-tab-group",
+    //styleUrls: ['./zalgo-tab-group.scss'],
     template: `
         <section class="sub-section full-width">
             <ul class="select_visible full-width">
@@ -21,11 +21,11 @@ import { ResTab } from "./res-tab.component";
     `
 })
 
-export class ResTabGroup implements AfterViewInit {
+export class ZalgoTabGroup implements AfterViewInit {
 
     @Input() selectedIndex: number = 0;
 
-    @ContentChildren(ResTab) tabElements: QueryList<ResTab>;
+    @ContentChildren(ZalgoTab) tabElements: QueryList<ZalgoTab>;
 
     isVisible: boolean = false;
 
@@ -40,9 +40,9 @@ export class ResTabGroup implements AfterViewInit {
     set currentIndex(value: number) { this._currentIndex = value; }
 
     // tabs
-    private _tabs: ResTab[] = null;
-    get tabs(): ResTab[] { return this._tabs; }
-    set tabs(value: ResTab[]) { this._tabs = value; }
+    private _tabs: ZalgoTab[] = null;
+    get tabs(): ZalgoTab[] { return this._tabs; }
+    set tabs(value: ZalgoTab[]) { this._tabs = value; }
 
     // tab titles
     private _titles: string[] = null;

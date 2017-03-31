@@ -1,7 +1,7 @@
 ﻿import { Component } from "@angular/core";
 
 @Component({
-    selector: "res-footer",
+    selector: "zalgo-footer",
     template: `
         <footer class="footer full-width relative-important">
             <img class="ksu-logo" src= "./Images/ksu_black.png" alt= "Kent State University" />
@@ -10,4 +10,4 @@
     `,
 })
 
-export class ResFooterComponent { }
+export class ZalgoFooterComponent { }
