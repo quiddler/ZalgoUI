@@ -1,0 +1,54 @@
+﻿<header class="zalgo-banner"
+        [ngClass]="{ 'zalgo-is-sticky' : navIsSticky, 'zalgo-is-open' : menuIsOpen }"
+        role="banner"
+        #resHeader>
+    
+    <div class="zalgo-grid">
+        
+        <a href="" 
+           (click)="scrollToTopOfPage($event)"
+           class="zalgo-logo zalgo-scrollto"
+           rel="bookmark">{{appName}}</a>
+
+        <button type="button"
+                role="button"
+                aria-label="Toggle Navigation"
+                data-zalgo-navicon="button"
+                [ngClass]="{ 'zalgo-is--closed' : menuIsOpen }"
+                (click)="toggleMenu()"
+                class="zalgo-icon-menu zalgo-navicon zalgo-navicon-x">
+            
+            <span class="zalgo-navicon__lines"></span>
+
+        </button>
+
+        <div role="navigation"
+             class="zalgo-nav">
+            
+            <ul class="zalgo-nav__list">
+                
+                <li class="zalgo-nav__list-item"
+                    *ngFor="let link of links; let i = index;">
+
+                    <a routerLink="{{link.url}}"
+                       routerLinkActive="zalgo-nav-active"
+                       (click)="setCurrentRoute(i)"
+                       [routerLinkActiveOptions]="{ exact: true }"
+                       class="zalgo-scrollto">{{link.name}}</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</header>
+
+<div class="zalgo-hero"
+     #resHero>
+    
+    <zalgo-fader [isVisible]="visible">
+        <h1 class="zalgo-hero__title">{{heroTitle}}</h1>
+
+        <p class="zalgo-hero__tagline">{{heroTagline}}</p>
+    </zalgo-fader>
+
+</div>

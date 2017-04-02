@@ -42,3 +42,20 @@
 NOTE:
   // here's where you can find all of the AST compiler options
   "./node_modules/@angular/cli/lib/config/schema.json"
+  
+		ng serve --open
+
+NOTES:
+
+	a. git
+
+		- remove files that were already part of the project, 
+			e.g. remove node_modules from source control
+
+			i.  add 'node_modules' to .gitignore file
+
+			ii. in the command line run:
+
+				git rm -r --cached node_modules
+				git commit -m 'Remove the now ignored directory node_modules'
+				git push origin master
