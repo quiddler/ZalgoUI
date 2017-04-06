@@ -1,6 +1,4 @@
-﻿import { Component, AfterViewInit, OnDestroy, Input, ViewChild, HostListener } from "@angular/core";
-import { ResBus } from "../../bus/bus.service";
-import { ResAnimator } from "../../animations/res-animator";
+﻿import { Component, Input, HostListener } from "@angular/core";
 
 @Component({
     moduleId:     module.id,
@@ -9,31 +7,37 @@ import { ResAnimator } from "../../animations/res-animator";
     styleUrls:  ['drop-down.scss']
 })
 
-export class ZalgoDropDown implements AfterViewInit, OnDestroy {
+export class ZalgoDropDown {
 
-    @Input() links;
-    @Input() appName;
+    @Input() open;
 
-    @ViewChild("resHeader") header;
-    @ViewChild("resHero") hero;
+    constructor() { }
 
-    constructor(private bus: ResBus) {
-        this.registerPageLoad();
+    @HostListener('window:click', ['$event'])
+    onClick(event: Event): void {
+
+        let elem: Element = event.target as Element;
+
+        if (!elem.matches('.zalgo-dropdown')) {
+
+            var dropdowns: HTMLCollection = document.getElementsByClassName("dropdown-content");
+
+            for (let i: number = 0, j: number = dropdowns.length; i < j; i++) {
+
+                var dropdown: Element = dropdowns[i];
+
+                if (dropdown.classList.contains('zalgo-show')) {
+                    dropdown.classList.remove('zalgo-show');
+                }
+            }
+        }
+        event.stopPropagation();
     }
 
-    registerPageLoad() {
-        this.pageLoadToken = this.bus.on("page-load", (pageInfo) => {
-            this.toggleHeroText(pageInfo.heroTitle, pageInfo.heroTagline);
-        });
-    }
+    toggleHidden(event: Event): void {
+        
+        let elem: Element = event.target as Element;
 
-    @HostListener('window:resize', ['$event'])
-    onResize(event) {
-        this.setOffset();
-    }
-
-    @HostListener('window:scroll', ['$event'])
-    onscroll(event) {
-        this.navIsSticky = window.scrollY >= this.offset ? true : false;
+        elem.classList.toggle("zalgo-show");
     }
 }
