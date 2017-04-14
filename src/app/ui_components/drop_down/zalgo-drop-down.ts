@@ -3,18 +3,20 @@
 @Component({
     moduleId:     module.id,
     selector:    'zalgo-drop-down',
-    templateUrl: 'drop-down.html',
-    styleUrls:  ['drop-down.scss']
+    templateUrl: './zalgo-drop-down.html',
+    styleUrls:  ['./zalgo-drop-down.css']
 })
 
 export class ZalgoDropDown {
 
-    @Input() open;
+    @Input() open: boolean;
 
     constructor() { }
 
     @HostListener('window:click', ['$event'])
     onClick(event: Event): void {
+
+        console.log('window click occurred');
 
         let elem: Element = event.target as Element;
 
@@ -32,12 +34,5 @@ export class ZalgoDropDown {
             }
         }
         event.stopPropagation();
-    }
-
-    toggleHidden(event: Event): void {
-        
-        let elem: Element = event.target as Element;
-
-        elem.classList.toggle("zalgo-show");
     }
 }

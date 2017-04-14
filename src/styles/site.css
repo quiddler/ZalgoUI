@@ -1,0 +1,330 @@
+﻿html, body {
+    min-height: 100%;
+    overflow-x: hidden; 
+}
+
+/* Material Design: DATE PICKER OVERRIDES */
+.datepicker {
+    margin-left: 1em;
+}
+
+.datepicker__input {
+    text-align: center;
+    width: 20.5em !important;
+    border: solid 3px #336191 !important;
+}
+
+.datepicker__input:hover {
+    border: solid 3px #336191 !important;
+    background-color: #336191 !important;
+    color: white !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+}
+
+.datepicker__calendar {
+    text-align: center;
+    border: 1px solid #ccc;
+    top: -24.5em !important;
+    left: 0 !important;
+}
+
+.datepicker__calendar__nav {
+    border-bottom: 2px solid #ccc !important;
+}
+
+.datepicker__calendar__nav__header {
+    font-weight: 800;
+    color: #336191;
+    padding-top: 0.7em;
+}
+
+.datepicker__calendar__nav__chevron {
+    fill: #336191 !important;
+}
+
+.datepicker__calendar__nav__chevron:hover {
+    fill: #102330 !important;
+}
+
+.datepicker__calendar__label {
+    color: #ccc !important;
+    font-weight: 800;
+}
+
+/* STYLE GUIDE OVERRIDES */
+.content-panel {
+    margin-top: 5em;
+}
+
+.selectable-row:hover {
+    background-color: #F5F5F5;
+    box-shadow: 1px 1px 5px #0d0d26;
+    border-bottom: none;
+}
+
+.selectable-row:hover td {
+    background-color: #F5F5F5;
+    color: #0d0d26;
+    font-stretch: expanded;
+    font-weight: 700;
+    border-bottom: none;
+}
+
+.footer.relative-important {
+    position: relative !important;
+}
+
+.container.less-bottommy {
+    margin-bottom: 0;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.lowered {
+    position: relative;
+    margin-top: 5%;
+    height: inherit;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(14px); 
+  }
+}
+
+ng-component {
+    display: block;
+}
+
+.centered {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    width: 100vw;
+}
+
+.res-error {
+    background-color: #990000;
+    padding: 10%;
+    color: white;
+}
+
+.res-success {
+    background-color: #008000;
+    color: white;
+}
+
+.res-info {
+    padding: 10%;
+    color: #102330;
+}
+
+.main-section .content-panel {
+    margin-top: 0;
+}
+
+.sub-section.full-width {
+    display: table;
+    padding-bottom: 0;
+    width: 100.1%;
+}
+
+/*  ICON ANIMATIONS */
+
+.spin-forward {
+  -webkit-animation: spin-forward 4s infinite linear;
+          animation: spin-forward 4s infinite linear;
+}
+
+@-webkit-keyframes spin-forward {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes spin-forward {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.spin-reverse {
+  -webkit-animation: spin-reverse 4s infinite linear;
+          animation: spin-reverse 4s infinite linear;
+}
+
+@-webkit-keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+            transform: rotate(-359deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+            transform: rotate(-359deg);
+  }
+}
+
+.squished {
+    margin-left: -2em;
+    margin-right: -2em;
+    position: relative;
+    bottom: -0.25em;
+    font-size: 3.75em;
+}
+
+.level-one-text {
+    text-shadow: 1px 1px 5px #113;
+}
+
+.level-two-text {
+    text-shadow: 2px 2px 6px #113;
+}
+
+.level-one-box {
+    box-shadow: 1px 1px 5px #888;
+}
+
+input {
+    font-size: 1em;
+    margin-bottom: 1em;
+    -webkit-transition:  all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    display: block;
+    line-height: normal;
+    border: solid 2px #ccc;
+}
+
+textarea {
+    height: 10em;
+    padding: .7em 1em;
+    resize: vertical;
+    border: solid 2px #ccc;
+    font-size: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    overflow: auto;
+}
+
+.data-table td {
+    background-color: transparent;
+}
+
+.data-table tr {
+    background-color: transparent;
+}
+
+.data-table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+}
+
+.half-width-button {
+    width: 45%;
+    height: 3.5em;
+    display: inline-block;
+    position: relative;
+}
+
+.half-width {
+    width: 49%;
+    display: inline-block;
+    position: relative;
+}
+
+.res-red {
+    background-color: #990000;
+    color: white;
+}
+
+.res-green {
+    background-color: #008000;
+    color: white;
+}
+
+.res-red-hover:hover {
+    background-color: #990000;
+    color: white;
+    border-color: #990000;
+}
+
+.res-green-hover:hover {
+    background-color: #008000;
+    color: white;
+    border-color: #007000;
+}
+
+.res-blue-hover:hover {
+    background-color: #336191;
+    color: white;
+}
+
+.res-bottom-margin {
+    margin-bottom: 1em;
+}
+
+.res-tab-content {
+    border-bottom: 2px solid #c3c3c3 !important;
+    padding: 1em;
+}
+
+.min-gear-height {
+    min-height: 8em;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+input:disabled {
+    cursor: not-allowed;
+}
+
+input:disabled:hover {
+    color: rgba(0, 0, 0, 0.5);
+    border: solid 2px #ccc;
+    transition: none;
+}
+
+select:disabled {
+    cursor: not-allowed;
+}
+
+select:disabled:hover {
+    color: rgba(0, 0, 0, 0.5);
+    border: solid 2px #ccc;
+    transition: none;
+}
+
+.centered-button {
+    width: 90%;
+    height: 3.5em;
+    margin: 5%;
+}

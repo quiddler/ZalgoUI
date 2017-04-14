@@ -1,7 +1,7 @@
 ﻿import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 
-var url = window["zalgo"].LoginUrl;
+var url = "http://wwww.google.com";// window["zalgo"].LoginUrl;
 
 @Injectable()
 export class ErrorHandler {

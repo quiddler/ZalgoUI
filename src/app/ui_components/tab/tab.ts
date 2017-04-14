@@ -1,12 +1,13 @@
 ﻿import { Component, Input } from "@angular/core";
-import { fader } from "../animations/fade-in-out.animation";
+//import { fader } from "../../animations/fade-in-out.animation";
 
 @Component({
+    moduleId: module.id,
     selector: "zalgo-tab",
-    animations: [fader()],
+    //animations: [fader()],
     //styleUrls: ['./zalgo-tab.component.scss'],
     template: `
-        <div class="full-width" [@visibilityChanged]="!disabled" >
+        <div class="full-width" >
             <ng-content class="full-width" *ngIf="!disabled"></ng-content>
         </div>
     `

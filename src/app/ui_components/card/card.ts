@@ -1,6 +1,7 @@
 ﻿import { Component, Input } from "@angular/core";
 
 @Component({
+    moduleId: module.id,
     selector: "zalgo-card",
     //styleUrls: ['./card.scss'],
     template: `
@@ -31,7 +32,6 @@
         </section>
     `
 })
-
 export class ZalgoCardComponent {
     @Input() title: string;
     @Input() dependencyStatus: string;

@@ -101,12 +101,13 @@ export class UniqueSet<T> implements Set<T>, IterableIterator<T> {
             return {
                 done: false,
                 value: this._components[this._pointer++]
-            }
+            };
         } else {
             this._pointer = 0;
             return {
+                value: null,
                 done: true
-            }
+            };
         }
     }
 

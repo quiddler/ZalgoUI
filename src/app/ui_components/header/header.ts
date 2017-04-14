@@ -4,9 +4,9 @@ import { ZalgoAnimator } from "../../animations/zalgo-animator";
 
 @Component({
     moduleId:     module.id,
-    selector:    'zaglo-header',
-    templateUrl: 'zaglo-header.component.html',
-    styleUrls:  ['zaglo-header.component.css']
+    selector:    'zalgo-header',
+    templateUrl: './header.html',
+    styleUrls:  ['./header.css']
 })
 
 export class ZalgoHeaderComponent implements AfterViewInit, OnDestroy {

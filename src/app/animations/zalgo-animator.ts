@@ -54,7 +54,7 @@ export class ZalgoAnimator {
 
         setTimeout(() => {
 
-            var id: NodeJS.Timer = setInterval(() => {
+            var id: any = setInterval(() => {
 
                 let timePassed: number = new Date().getTime() - start;
                 let progress: number = timePassed / opts.duration;

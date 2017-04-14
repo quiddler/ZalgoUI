@@ -1,7 +1,7 @@
 ﻿<header class="zalgo-banner"
         [ngClass]="{ 'zalgo-is-sticky' : navIsSticky, 'zalgo-is-open' : menuIsOpen }"
         role="banner"
-        #resHeader>
+        #zalgoHeader>
     
     <div class="zalgo-grid">
         
@@ -43,7 +43,7 @@
 </header>
 
 <div class="zalgo-hero"
-     #resHero>
+     #zalgoHero>
     
     <zalgo-fader [isVisible]="visible">
         <h1 class="zalgo-hero__title">{{heroTitle}}</h1>
