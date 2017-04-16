@@ -7,7 +7,12 @@ enableProdMode();
     moduleId: module.id,
     template: `
     	<zalgo-page style="height:100vh;" [heroTitle]='"Search"' [heroTagline]='"If youre hoping to find your self... you wont"' [pageId]='"searchpage"'>
-        	<h3>{{msg}}</h3>
+        	<zalgo-card [title]="'UI Components'" [dependencyStatus]="'success'">                
+                <section class="res-info">
+                    <h5 class="section-header">{{msg}}</h5>
+                    <h3>Search Page</h3>
+                </section>
+            </zalgo-card>
         </zalgo-page>
     `,
     animations: [new Animator().slideLeft()],
