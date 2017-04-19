@@ -15,7 +15,7 @@ enableProdMode();
             </zalgo-card>
         </zalgo-page>
     `,
-    animations: [new Animator().slideLeft()],
+    animations: [Animator.slideRight()],
     host: { '[@routerTransition]': '' }
 })
 export class HomePage {

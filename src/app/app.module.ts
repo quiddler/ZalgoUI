@@ -29,6 +29,7 @@ import { ZalgoTabGroup } from "./ui_components/tab_group/tab-group";
 import { ZalgoTab } from "./ui_components/tab/tab";
 import { ZalgoSelect } from "./ui_components/select/select";
 import { ZalgoPageComponent } from "./ui_components/page/page";
+import { ZalgoFader } from "./ui_components/fader/zalgo-fader";
 
 @NgModule({
     declarations: [
@@ -43,7 +44,8 @@ import { ZalgoPageComponent } from "./ui_components/page/page";
         ZalgoTabGroup,
         ZalgoTab,
         ZalgoSelect,
-        ZalgoPageComponent
+        ZalgoPageComponent,
+        ZalgoFader
     ],
     imports: [
         BrowserModule,
