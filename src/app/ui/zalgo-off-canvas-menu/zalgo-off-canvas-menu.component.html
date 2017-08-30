@@ -1,0 +1,7 @@
+<div id="zalgo-sidenav" class="zalgo-sidenav">
+  <a href="javascript:void(0)" class="zalgo-close-button" (click)="closeNav()">&times;</a>
+  <ng-content></ng-content>
+</div>
+<div class="zalgo-overlay" [ngStyle]="{'opacity': overlayOpacity, 'display': overlayDisplay}" (click)="closeNav()"></div>
+<!-- Use any element to open the sidenav -->
+<span class="zalgo-sidenav-menu" (click)="openNav()"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></span>

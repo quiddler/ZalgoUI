@@ -1,29 +1,42 @@
-import { Component, enableProdMode, OnDestroy } from "@angular/core";
-import { ZalgoBus } from "./bus/bus.service";
-import { ZalgoCache } from "./cache/cache.service";
-
-enableProdMode();
+import { Component } from '@angular/core';
+import { ZalgoLink } from './models/link';
+import { ZalgoLinkContainer } from './models/link-container';
 
 @Component({
-    moduleId: module.id,
-    selector: "app",
-    templateUrl: "./app.component.html",
+  selector: 'zalgo',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent {
 
-    public nameOfApp: string = "Zalgo";
+  title = 'Zalgo LLC';
+  public links: any[];
 
-    public navbarLinks = [
-    	{ name: "Home", url: "/" },
-        { name: "Search", url: "/search" },
-        { name: "Logout", url: "/logout" }
-    ];
+  items: any[] = [
+      { a: 1, b: 2, c: 3 },
+      { a: 4, b: 5, c: 6 },
+      { a: 7, b: 8, c: 9 },
+      { a: 10, b: 11, c: 12 },
+  ];
 
-    // the references to the services below should keep them from being garbage collected
-    // - i.e., they will exist during the entire lifetime of the app
-    constructor(private bus: ZalgoBus, private cache: ZalgoCache) { }
+  constructor() {
 
-    ngOnDestroy() {
-        // this.cache.cleanse(); // uncomment to disable localStorage's persistance between sessions
-    }
+  	let x = new ZalgoLinkContainer('Dirname 1', [
+  		new ZalgoLink('Item 5', '#'),
+  		new ZalgoLink('Item 6', '#'),
+  		new ZalgoLink('Item 7', '#')
+  	]);
+
+  	this.links = [
+  		new ZalgoLink('Item 1', '#'),
+  		new ZalgoLink('Item 2', '#'),
+  		new ZalgoLink('Item 3', '#'),
+  		new ZalgoLink('Item 4', '#'),
+  		x
+  	];
+
+
+  }
+
+  
 }

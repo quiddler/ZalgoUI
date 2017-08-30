@@ -1,0 +1,10 @@
+<ul class="dropdown menu" (click)="toggle($event)">
+	<li>
+		<a href="#" class="zalgo-dropdown" onClick="return false;">{{title}}
+			<i class="fa fa-angle-right" aria-hidden="true" style="margin-left: 0.5em"></i>
+			<div class="zalgo-dropdown-content {{displayClass}} {{sideClass}}">
+				<ng-content></ng-content>
+			</div>
+		</a>
+	</li>
+</ul>

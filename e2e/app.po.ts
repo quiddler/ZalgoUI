@@ -1,11 +1,11 @@
 import { browser, element, by } from 'protractor';
 
-export class ZalgoUIPage {
-	navigateTo() {
-		return browser.get('/');
-	}
+export class Ng2SassCliPage {
+  navigateTo() {
+    return browser.get('/');
+  }
 
-	getParagraphText() {
-		return element(by.css('app-root h1')).getText();
-	}
+  getParagraphText() {
+    return element(by.css('app-root h1')).getText();
+  }
 }

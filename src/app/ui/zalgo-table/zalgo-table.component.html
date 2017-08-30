@@ -1,0 +1,10 @@
+<table *ngIf="objs.length > 0" class="{{tableClass}}">
+	<thead>
+		<th *ngFor="let keys of getKeys()">{{keys}}</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let obj of objs" >
+			<td *ngFor="let value of getValues(obj)">{{value}}</td>
+		</tr>
+	</tbody>
+</table>
