@@ -3,9 +3,10 @@
 # compiled output
 /dist
 /tmp
+/out-tsc
 
-# keeping lib
-#/node_modules
+# dependencies
+/node_modules
 
 # IDEs and editors
 /.idea
@@ -26,7 +27,7 @@
 # misc
 /.sass-cache
 /connect.lock
-/coverage/*
+/coverage
 /libpeerconnection.log
 npm-debug.log
 testem.log
@@ -36,6 +37,6 @@ testem.log
 /e2e/*.js
 /e2e/*.map
 
-#System Files
+# System Files
 .DS_Store
 Thumbs.db
