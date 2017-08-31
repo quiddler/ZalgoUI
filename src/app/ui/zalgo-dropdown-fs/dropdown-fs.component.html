@@ -1,0 +1,13 @@
+<ul class="dropdown menu" (click)="toggle($event)">
+	<li>
+		<a href="#" class="zalgo-dropdown" onClick="return false;">{{title}}
+			<i class="fa fa-angle-right" aria-hidden="true" style="margin-left: 0.5em"></i>
+			<ul class="zalgo-dropdown-content dropdown menu {{displayClass}}" *ngIf="links.length > 0">
+				<li class="zalgo-dropdown-link" *ngFor="let link of links">
+					<a href="{{link.url}}" *ngIf="link.constructor.name === 'ZalgoLink'" onClick="return false;">{{link.title}}</a>
+					<zalgo-dropdown-fs *ngIf="link.constructor.name === 'ZalgoLinkContainer'" [title]="link.title" [links]="link.links"></zalgo-dropdown-fs>
+				</li>
+			</ul>
+		</a>
+	</li>
+</ul>

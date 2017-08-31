@@ -1,0 +1,62 @@
+/* The side navigation menu */
+.zalgo-sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: auto;
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+
+/* When you mouse over the navigation links, change their color */
+.zalgo-sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.zalgo-sidenav .zalgo-close-button {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.zalgo-close-button {
+    color: whitesmoke;
+}
+
+.zalgo-close-button:hover {
+    color: red !important;
+}
+
+.zalgo-overlay {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    background-color: black;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 900;
+}
+
+.zalgo-sidenav-menu {
+    position: fixed;
+    top: 2em;
+    left: 2em;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .zalgo-sidenav {padding-top: 15px;}
+    .zalgo-sidenav a {font-size: 18px;}
+}

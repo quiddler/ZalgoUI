@@ -14,6 +14,7 @@ const getFiles = Blueprint.prototype.files;
 
 export default Blueprint.extend({
   description: '',
+  aliases: ['g'],
 
   availableOptions: [
     {
@@ -30,7 +31,7 @@ export default Blueprint.extend({
       name: 'module',
       type: String,
       aliases: ['m'],
-      description: 'Allows specification of the declaring module.'
+      description: 'Specifies where the guard should be provided.'
     }
   ],
 

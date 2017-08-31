@@ -1,14 +1,14 @@
-import { ZalgoUIPage } from './app.po';
+import { Ng2SassCliPage } from './app.po';
 
-describe('zalgo-ui App', () => {
-	let page: ZalgoUIPage;
+describe('ng2-sass-cli App', () => {
+  let page: Ng2SassCliPage;
 
-	beforeEach(() => {
-		page = new ZalgoUIPage();
-	});
+  beforeEach(() => {
+    page = new Ng2SassCliPage();
+  });
 
-	it('should display message saying app works', () => {
-		page.navigateTo();
-		expect(page.getParagraphText()).toEqual('app works!');
-	});
+  it('should display message saying app works', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('app works!');
+  });
 });

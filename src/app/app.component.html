@@ -1,3 +1,177 @@
-<h1>
-  	{{title}}
-</h1>
+<zalgo-off-canvas-menu>
+	<a class="zalgo-link" href="#">About</a>
+	<a class="zalgo-link" href="#">Services</a>
+	<a class="zalgo-link" href="#">Clients</a>
+	<a class="zalgo-link" href="#">Contact</a>
+</zalgo-off-canvas-menu>
+<div id="main">
+	<h1 class="text-center">
+	  {{title}}
+	</h1>
+	<hr>
+	<div class="row">
+	<div class="columns small-12 medium-4 large-4">
+		<div class="panel">
+			<p zalgoDraggable>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, accusamus minus et voluptatibus, amet officia nemo fugiat magni eligendi ut, distinctio quia, praesentium repellendus ratione? Minus vitae, nemo, ab laborum esse dolorum quasi nesciunt similique suscipit reiciendis. Suscipit ratione ab quisquam quidem, tempore blanditiis perspiciatis laboriosam.
+			</p>
+		</div>
+	</div>
+
+	<div class="columns small-12 medium-4 large-4">
+		<div class="panel">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, accusamus minus et voluptatibus, amet officia nemo fugiat magni eligendi ut, distinctio quia, praesentium repellendus ratione? Minus vitae, nemo, ab laborum esse dolorum quasi nesciunt similique suscipit reiciendis. Suscipit ratione ab quisquam quidem, tempore blanditiis perspiciatis laboriosam.
+			</p>
+		</div>
+	</div>
+
+	<div class="columns small-12 medium-4 large-4">
+		<div class="panel">
+			<zalgo-table [objs]="items" [tableClass]="scroll"></zalgo-table>
+		</div>
+	</div>
+	</div>
+
+	<hr>
+	<div class="row">
+		<div class="columns small-12 medium-4">
+			<div class="panel">
+				<zalgo-dropdown-fs [title]="'Click Drop Down'" [links]="links"></zalgo-dropdown-fs>
+			</div>
+		</div>
+
+		<div class="columns small-12 medium-4">
+			<div class="panel">
+				<zalgo-dropdown-tc [title]="'Click Drop Down'">
+					<div style="padding: 12px; text-align: center;">here's some content</div>
+				</zalgo-dropdown-tc>
+			</div>
+		</div>
+
+		<div class="columns small-12 medium-4">
+			<div class="panel">
+				<zalgo-dropdown-tc [title]="'Click Drop Bottom'" [side]="'bottom'">
+					<div style="padding: 12px; text-align: center;">here's some content</div>
+				</zalgo-dropdown-tc>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns small-12 medium-4">
+			<div class="panel">
+				<zalgo-dropdown-tc [title]="'Click Drop Top'" [side]="'top'">
+					<div style="padding: 12px; text-align: center;">here's some content</div>
+				</zalgo-dropdown-tc>
+			</div>
+		</div>
+
+		<div class="columns small-12 medium-4">
+			<div class="panel">
+				<zalgo-dropdown-tc [title]="'Click Drop Right'" [side]="'right'">
+					<div style="padding: 12px; text-align: center;">here's some content</div>
+				</zalgo-dropdown-tc>
+			</div>
+		</div>
+
+		<div class="columns small-12 medium-4">
+			<div class="panel">
+				<zalgo-dropdown-tc [title]="'Click Drop Left'" [side]="'left'">
+					<div style="padding: 12px; text-align: center;">here's some content</div>
+				</zalgo-dropdown-tc>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+	<div class="row">
+		<div class="columns large12">
+			<pre class="brush: javascript;">
+				//==============================================================================
+				//                                  Shiva
+
+				function World() {{ '{' }}	
+					this.hello = () => {{ '{' }}
+						console.log("Hello World!");
+					{{ '}' }}
+				{{ '}' }}
+
+				let world = new World();
+				world.hello();
+			</pre>
+		</div>
+	</div>
+
+	<hr>
+	<div class="row">
+	<div class="columns small-12 medium-4 large-4">
+		<div class="panel">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, accusamus minus et voluptatibus, amet officia nemo fugiat magni eligendi ut, distinctio quia, praesentium repellendus ratione?
+			</p>
+		</div>
+	</div>
+
+	<div class="columns small-12 medium-7 large-7">
+		<div class="panel">
+			<zalgo-accordion [title]="'Accordion One'">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus consequatur libero sit voluptatem praesentium minus est, veniam modi, voluptatum nesciunt repellendus. Consectetur, in?
+			</zalgo-accordion>
+			<zalgo-accordion [title]="'Accordion Two'">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus consequatur libero sit voluptatem praesentium minus est, veniam modi, voluptatum nesciunt repellendus. Consectetur, in?
+			</zalgo-accordion>
+			<zalgo-accordion [title]="'Accordion Three'">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus consequatur libero sit voluptatem praesentium minus est, veniam modi, voluptatum nesciunt repellendus. Consectetur, in?
+			</zalgo-accordion>
+			<zalgo-accordion [title]="'Accordion Four'">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus consequatur libero sit voluptatem praesentium minus est, veniam modi, voluptatum nesciunt repellendus. Consectetur, in?
+			</zalgo-accordion>
+			<zalgo-accordion [title]="'Accordion Five'">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus consequatur libero sit voluptatem praesentium minus est, veniam modi, voluptatum nesciunt repellendus. Consectetur, in?
+			</zalgo-accordion>
+		</div>
+	</div>
+	<div class="columns small-1 medium-1 large-1">
+	</div>
+	</div>
+	<br><br><br>
+
+
+	<div class="row">
+		<div class="columns small-12 medium-12 large-12">
+			<zalgo-reveal>
+				<h1>Zalgo Reveal</h1>
+				<p class="lead">A paragraph - class == lead</p>
+				<p>A paragraph - no class</p>
+			</zalgo-reveal>
+		</div>
+	</div>
+
+
+	<!-- FOOTER -->
+	<div class="zalgo-footer-container">
+		<div class="panel">
+
+			<img src="assets/images/orchid-on-misty-pebbles.jpg" alt="orchid on misty pebbles" class="zalgo-footer">
+
+			<h1>
+			  <span class="char1">E</span>
+			  <span class="char2">l</span>
+			  <span class="char3">i</span>
+			  <span class="char4">o</span>
+			  <span class="char5">t</span>
+			  <span class="char6">E</span>
+			  <span class="char7">a</span>
+			  <span class="char8">s</span>
+			  <span class="char9">t</span>
+			  <span class="char10">e</span>
+			  <span class="char11">r</span>
+			  <span class="char12">l</span>
+			  <span class="char13">i</span>
+			  <span class="char14">n</span>
+			  <span class="char15">g</span>
+			</h1>
+			
+		</div>
+	</div>
+</div>

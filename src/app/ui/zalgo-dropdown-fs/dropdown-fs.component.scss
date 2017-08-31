@@ -1,0 +1,29 @@
+@import "../../../assets/sass/zalgo";
+
+.zalgo-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.zalgo-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $dropdown-bg-color;
+    min-width: $zalgo-dropdown-min-width;
+    box-shadow: $zalgo-shadow;
+    padding: $zalgo-padding-tb;
+    z-index: $zalgo-level-one;
+
+    &.zalgo-show {     
+        display: block;
+    }
+}
+
+.zalgo-dropdown-link {
+    position: relative;
+    width: 100%;
+
+    &:hover {
+        background-color: $dropdown-bg-highlight;
+    }
+}

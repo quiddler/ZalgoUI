@@ -1,0 +1,169 @@
+/*
+ 	GENERAL
+ */
+$zalgo-padding-tb: 12px 0px;
+$zalgo-padding-rl: 0px 12px;
+$zalgo-padding: 12px;
+$zalgo-level-one: 10;
+
+
+/*
+ 	Dropdown
+ */
+$zalgo-dropdown-min-width: 200px;
+
+
+.menu > li > a {
+    color: $dropdown-text-color;
+}
+
+[class*="fa-"] {
+    color: $dropdown-text-color;
+}
+
+.zalgo-top {
+    bottom: 2.5em;
+}
+
+.zalgo-bottom {
+    top: 2.5em;
+}
+
+.zalgo-right {
+    left: 100%;
+    top: 1em;
+}
+
+.zalgo-left {
+    right: 100%;
+    top: 1em;
+}
+
+/*
+ 	Accordion
+ */
+
+.zalgo-full-width {
+	width: 100%;
+}
+
+.zalgo-padding {
+	padding: $zalgo-padding;
+}
+
+/*
+ 	footer
+ */
+
+.zalgo-footer {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	height: 250px;
+	width: 400px;
+	background-size: contain;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+	filter: sepia(40%) invert(85%);
+	box-shadow: 1px 2px 13px brown;
+}
+
+.zalgo-footer-container {
+	position: relative;
+	width: 100%;
+	padding: $zalgo-padding;
+	background-color: whitesmoke;
+	border: 6px solid #eee;
+}
+
+h1 span {
+  font: 26px Monaco, MonoSpace;
+  height: 240px;
+  position: absolute;
+  width: 20px;
+  left: 49.75%;
+  bottom: 20px;
+  z-index: 12;
+  transform-origin: bottom center;
+  text-shadow: 2px 2px 4px black;
+}
+
+[class*="char"] {
+    transition: 0.5s;
+    animation: colorPulse infinite 6s ease-in-out;
+}
+
+@keyframes colorPulse {
+	0% {
+		color: black;
+	}
+	25% {
+		color: teal;
+	}
+	100% {
+		color: black
+	}
+}
+
+.char1 { 
+	transform: rotate(-49deg); 
+	animation-delay: 0.2s;
+}
+.char2 { 
+	transform: rotate(-43deg); 
+	animation-delay: 0.4s;
+}
+.char3 { transform: rotate(-37deg); animation-delay: 0.6s; }
+.char4 { transform: rotate(-31deg); animation-delay: 0.8s; }
+.char5 { transform: rotate(-25deg); animation-delay: 1s; }
+/* space */
+.char6 { transform: rotate(-11deg); animation-delay: 1.2s; }
+.char7 { transform: rotate(-4deg); animation-delay: 1.4s; }
+.char8 { transform: rotate(3deg); animation-delay: 1.6s; }
+.char9 { transform: rotate(10deg); animation-delay: 1.8s; }
+.char10 { transform: rotate(17deg); animation-delay: 2s; }
+.char11 { transform: rotate(24deg); animation-delay: 2.2s; }
+.char12 { transform: rotate(31deg); animation-delay: 2.4s; }
+.char13 { transform: rotate(37deg); animation-delay: 2.6s; }
+.char14 { transform: rotate(43deg); animation-delay: 2.8s; }
+.char15 { transform: rotate(49deg); animation-delay: 3s; }
+
+/*
+ 	Syntax Highlighter
+ */
+
+.syntaxhighlighter table td.gutter .line, 
+.syntaxhighlighter table td.code .line, 
+.syntaxhighlighter table {
+	padding: 0.5em !important;
+}
+
+/*
+ 	side nav - each page must have this id
+ */
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+.zalgo-link {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+    	color: whitesmoke;
+    }
+}
+
+
+
+
+
