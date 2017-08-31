@@ -16,7 +16,7 @@
 /* The navigation menu links */
 
 /* When you mouse over the navigation links, change their color */
-.zalgo-sidenav a:hover, .offcanvas a:focus{
+.zalgo-sidenav a:hover {
     color: #f1f1f1;
 }
 
@@ -53,6 +53,36 @@
     position: fixed;
     top: 2em;
     left: 2em;
+    height: 2em;
+    width: 3em;
+    z-index: 800;
+}
+
+.zalgo-shadow {
+    box-shadow: 2px 2px 8px black;
+}
+
+@mixin zalgo-bar() {
+    position: fixed;
+    left: 2em;
+    z-index: 1000;
+    height: 0.25em;
+    width: 3em;
+    background-color: red;
+    display: block;
+}
+
+.zalgo-bar1 {
+    @include zalgo-bar();
+    top: 2em; 
+}
+.zalgo-bar2 {
+    @include zalgo-bar();
+    top: 3em;
+}
+.zalgo-bar3 {
+    @include zalgo-bar();
+    top: 4em;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

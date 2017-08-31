@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   	selector: 'zalgo-off-canvas-menu',
@@ -9,7 +9,7 @@ export class ZalgoOffCanvasMenuComponent implements OnInit {
 
 	public overlayOpacity: string = "0";
 	public overlayDisplay: string = "none";
-
+    @ViewChild("zalgoSidenav") nav;
   	constructor() { }
 
   	ngOnInit() {
@@ -21,8 +21,8 @@ export class ZalgoOffCanvasMenuComponent implements OnInit {
   	   	and add a black background color to body 
   	*/
 	openNav() {
-	    document.getElementById("zalgo-sidenav").style.width = "250px";
-	    document.getElementById("main").style.marginLeft = "250px";
+	    this.nav.nativeElement.style.width = "250px";
+	    //document.getElementById("main").style.marginLeft = "250px";
 	    this.overlayDisplay = "block";
 	    this.overlayOpacity = "0.5";
 	}
@@ -33,8 +33,8 @@ export class ZalgoOffCanvasMenuComponent implements OnInit {
 		and the background color of body to white 
 	*/
 	closeNav() {
-	    document.getElementById("zalgo-sidenav").style.width = "0";
-	    document.getElementById("main").style.marginLeft = "0";
+	    this.nav.nativeElement.style.width = "0";
+	    //document.getElementById("main").style.marginLeft = "0";
 	    var self = this;
 	   	setTimeout( () => { self.overlayDisplay = "none"; }, 500);
 	    this.overlayOpacity = "0";
